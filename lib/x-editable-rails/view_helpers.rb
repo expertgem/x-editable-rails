@@ -49,7 +49,7 @@ module X
             # any remaining options become data attributes
             data  = {
               type:   options.delete(:type){ default_type_for(value) },
-              model:  model,
+              model:  options[:model] || model,
               name:   method,
               value:  output_value,
               placeholder: placeholder,
